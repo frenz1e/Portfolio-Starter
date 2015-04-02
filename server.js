@@ -18,12 +18,10 @@ app.get('/', function (req, res) {
 
 });
 
-var server = app.listen(8080, function () {
+var port = process.env.PORT || 3030;
 
-  var host = server.address().address;
-  var port = server.address().port;
+var server = app.listen(port, function () {
 
-  console.log('Listening at http://%s:%s', host, port);
-
+  console.log('Listening on port' + port + "...");
 
 });
