@@ -22,6 +22,6 @@ var port = process.env.PORT || 3030;
 
 var server = app.listen(port, function () {
 
-  console.log('Listening on port' + port + "...");
+  console.log('Listening on port ' + port + "...");
 
 });
