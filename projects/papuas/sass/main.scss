@@ -1,0 +1,299 @@
+@import "starter";
+@import "helpers";
+@import "sprite";
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+$maw: 900px;
+
+body {
+	background: #e5e3dc url(../img/bg_pattern.png);
+	font-family: 'Neucha', cursive;
+	min-width: 1000px;
+}
+
+.header-container{
+	background: #000 url(../img/mpintro_bg.jpg) 50% 0 no-repeat;
+}
+
+.main-header {
+	max-width: $maw;
+	margin: 0 auto;
+
+	h1 {
+		color: #a9a9a9;
+		text-align: center;
+		font-size: 26px;
+		font-weight: normal;
+		margin: 15px 0 13px;
+	}
+
+	h2 {
+		color: #fff;
+		font-size: 34px;
+		font-weight: normal;
+		margin: 0 0 70px;
+		text-align: center;
+	}
+}
+
+.main-nav {
+	@extend .clearfix;
+
+	color: #fef6bb;
+	font-size: 20px;
+	line-height: 68px;
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		float: left;
+	}
+	
+	a {
+		color: #fef6bb;
+		text-decoration: none;
+		padding: 0;
+
+		&:before {
+			@include sprite($hand);
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 12px;
+			position: relative;
+			top: -2px;
+		}
+	}
+}
+
+.l-top-menu {
+	float: left;
+	li {
+		margin-right: 35px;
+	}
+}
+
+.r-top-menu {
+	float: right;
+	li {
+		margin-left: 35px;
+	}
+}
+
+.mp-intro {
+	position: relative;
+	min-height: 640px - 68px; // bg img heigth - top menu height
+
+	.logo {
+		
+		position: absolute;
+		width: 222px;
+		height: 219px;
+		background: url(../img/logo.png) 0 0 no-repeat;
+		left: 50%;
+		top: 150px;
+		margin-left: -111px;
+	}
+
+}
+
+
+.mp-intro-lists {
+	@extend .clearfix;
+}
+
+.mp-intro-lists__node {
+	color: #a9a9a9;
+	font-size: 15px;
+	line-height: 18px;
+	width: 300px;
+	margin-bottom: 55px;
+
+	h3 {
+		color: #fff;
+		font-size: 24px;
+		font-weight: normal;
+		margin: 0 0 19px;
+		position: relative;
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: -40px;
+			top: -2px;
+			@include sprite($knuckle);
+		}
+	}
+
+}
+
+.mp-intro-lists__node_l {
+	float: left;
+}
+
+.mp-intro-lists__node_r {
+	float: right;
+	text-align: right;
+
+	h3:before {
+		left: auto;
+		right: -40px;
+		@include sprite($rknuckle);
+	}
+}
+
+.mp-intro-lists__node_l:nth-child(3) {
+	clear: both;
+}
+
+.main-container {
+	max-width: $maw;
+	margin: 0 auto;
+	padding: 35px 25px 90px;
+	background: rgba(255, 255, 255, .5);
+
+	h2 {
+		color: #000;
+		margin: 0 0 30px;
+		font-size: 30px;
+		font-weight: normal;
+		text-align: center;
+	}
+
+	.offers-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.mp-offer {
+		clear: both;
+		margin-bottom: 20px;
+	}
+
+	.mp-offer__img {
+		float: left;
+		margin: 0 30px 20px 20px;
+	}
+
+	.mp-offer__info {
+		overflow: hidden;
+	}
+
+	.mp-offer__title {
+		color: #008886;
+		font-size: 30px;
+		margin: 15px 0 10px;
+		text-decoration: none;
+	}
+
+	.mp-offer__text {
+		overflow: hidden;
+		font-size: 18px;
+		color: #363636;
+		line-height: 22px;
+	}
+
+	.mp-offer__price {
+		color: #e01c00;
+		float: right;
+		font-family: 'Lobster', cursive;
+		font-size: 18px;
+		margin-left: 30px;
+
+		span {
+			font-size: 36px;
+		}
+
+	}
+
+	.mp-offer:nth-child(2n) .mp-offer__price {
+		color: #04a31a;
+	}
+
+}
+
+.main-footer {
+	color: #999;
+	text-align: center;
+	padding: 35px 0;
+	font: normal 14px Arial, sans-serif;
+}
+
+.text-center {
+	text-align: center;
+}
+
+/*****************
+	mp forms
+******************/
+
+.mp-form {
+	
+	width: 50%;
+	margin: 0 auto;
+	padding: 30px;
+	background: #fff;
+
+	input[type=text],
+	input[type=email],
+	input[type=password] {
+		width: 100%;
+		display: block;
+		line-height: 30px;
+		height: 30px;
+		padding: 0 10px;
+		margin-bottom: 20px;
+		outline: 0;
+		border: 1px solid #999;
+
+		&  + .form-help-block {
+			margin: -15px 0 10px;
+		}
+	}
+
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	button {
+		color: #fef6bb;
+		background: #111;
+		border: none;
+		line-height: 40px;
+		min-width: 200px;
+		margin: 0 0 10px;
+		padding: 0 20px;
+		outline: 0;
+		font-family: 'Neucha', cursive;
+		font-size: 18px;
+	}
+
+	.mp-rekl-or-webm {
+		text-align: center;
+		margin: 20px 0 20px;
+
+		label {
+			margin: 0 10px;
+		}
+
+		input {
+			margin-right: 7px;
+		}
+	}
+
+	.form-help-block {
+		color: #999;
+	}
+
+}
+
+

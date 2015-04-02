@@ -1,0 +1,96 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+*/
+$hand-x: 0px;
+$hand-y: 0px;
+$hand-offset-x: 0px;
+$hand-offset-y: 0px;
+$hand-width: 22px;
+$hand-height: 25px;
+$hand-total-width: 68px;
+$hand-total-height: 25px;
+$hand-image: '../img/sprite.png';
+$hand: 0px 0px 0px 0px 22px 25px 68px 25px '../img/sprite.png';
+$knuckle-x: 22px;
+$knuckle-y: 0px;
+$knuckle-offset-x: -22px;
+$knuckle-offset-y: 0px;
+$knuckle-width: 23px;
+$knuckle-height: 22px;
+$knuckle-total-width: 68px;
+$knuckle-total-height: 25px;
+$knuckle-image: '../img/sprite.png';
+$knuckle: 22px 0px -22px 0px 23px 22px 68px 25px '../img/sprite.png';
+$rknuckle-x: 45px;
+$rknuckle-y: 0px;
+$rknuckle-offset-x: -45px;
+$rknuckle-offset-y: 0px;
+$rknuckle-width: 23px;
+$rknuckle-height: 22px;
+$rknuckle-total-width: 68px;
+$rknuckle-total-height: 25px;
+$rknuckle-image: '../img/sprite.png';
+$rknuckle: 45px 0px -45px 0px 23px 22px 68px 25px '../img/sprite.png';
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+.papicon_hand {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 22px;
+  height: 25px;
+}
+.papicon_knuckle {
+  background-image: url(../img/sprite.png);
+  background-position: -22px 0px;
+  width: 23px;
+  height: 22px;
+}
+.papicon_rknuckle {
+  background-image: url(../img/sprite.png);
+  background-position: -45px 0px;
+  width: 23px;
+  height: 22px;
+}
