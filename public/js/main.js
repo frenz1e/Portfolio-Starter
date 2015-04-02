@@ -5,19 +5,6 @@ var myPage = {
 		this.parallax();
 	},
 
-	lazyInit: function() {
-
-		var bLazy = new Blazy({ 
-			breakpoints: [{
-				width: 740,
-				src: 'data-src-small'
-			}], 
-			success: function(element){
-			}
-		});
-
-	},
-
 	parallax: function() {
 		var el = document.getElementById("intro");
 
