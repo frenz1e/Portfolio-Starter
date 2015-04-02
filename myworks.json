@@ -1,0 +1,42 @@
+{
+	"imageRoot": "/img/projects",
+	"worksList": [
+		{
+			"name": "Portfolio Starter",
+			"description": "Верстка, Дизайн, Программирование",
+			"imageName": "pstarter.jpg",
+			"link": "/",
+			"github": true
+		},
+		{
+			"name": "PolitProfi School",
+			"description": "Верстка",
+			"imageName": "pp.jpg",
+			"link": "http://politprofischool.com"
+		},
+		{
+			"name": "Green Light",
+			"description": "Верстка",
+			"imageName": "green.jpg",
+			"link": "green"
+		},
+		{
+			"name": "Astra",
+			"description": "Верстка",
+			"imageName": "astra.jpg",
+			"link": "astra"
+		},
+		{
+			"name": "Papuas",
+			"description": "Верстка",
+			"imageName": "papuas.jpg",
+			"link": "papuas"
+		},
+		{
+			"name": "Lokon",
+			"description": "Верстка",
+			"imageName": "lokon.jpg",
+			"link": "lokon"
+		}
+	]
+}

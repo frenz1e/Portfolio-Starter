@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vitalii Dus</title>
+	<meta name="viewport" content="width=device-width">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,900&subset=latin,	cyrillic-ext' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+	<section class="intro" id="intro">
+		<div class="container">
+			<div class="intro__text">
+				<h1>Vitalii Dus</h1>
+				<h2>web developer</h2>
+			</div>			
+		</div>
+	</section>
+
+	<section class="about">
+		<div class="container">
+			<div class="ava">
+				<img class="ava_img" src="/img/ava.png">
+			</div>
+
+			<h3>Обо мне</h3>
+
+			<h4>Привет, я frontend-разработчик из Сибири c более чем 7ми летним опытом в web.</strong></h4>
+
+			<p>Мое основное направление работы - это <b>frontend</b>, <b>UX</b> и немного <b>design</b>. Я создаю современную адаптивную верстку страниц, с большим количеством <b>css</b>, <b>js</b> - анимаций и эффектов. Уже довольно длительное время я принимаю участие в больших проектах. Это значит что я занимаюсь не просто нарезкой макетов, но и осуществляю внедрениее в серверный код, поддержку и правку "на лету". Помогаю выстроить понятный пользоватлям интерфейс, при необходимости, используя общую концепцию дизайна проекта, стилизую как отдельные элементы так и полностью страницы.</p>
+
+			<p>Последнее время очень сильно набрали популярность js-фрейморки и создание single page web app, поэтому усиленно прокачиваюсь в этом направлении.</p>
+
+			<p>Я имею опыт серверного программирования(<b>PHP</b>), а также проектирования и работы с бд.</p>
+
+			<p>У меня есть <b>степень бакалавра</b> по компьютерным наукам и <b>диплом специалиста</b> по программированию, которые я получил по окончанию Сибирского Федереальноо Университета. Пройдя курсы при МГТУ им. Баумана, получил сертификат "Профессиональная разработка на PHP5".</p>
+
+			<p>Естественно, я обладаю обширным опытом в созданиии веб проектов различной сложности и масштаба. Отлично себя чувствую в команде разработчиков. Могу работать удаленно, соблюдая сроки и обеспечивая постоянный фидбэк в рабочее время.</p>
+		</div>
+	</section>
+
+	<section class="skills">
+		<div class="container">
+			<h3>Технологии и инструменты</h3>
+			<p>Я слежу за тенденциями web, поэтому стараюсь использовать передовые технологии и инструменты разработки, такие как <b>gulp</b>, <b>sass</b>, <b>autoprefixer</b>, <b>sprite geneartion</b>, <b>svg</b>, <b>font-icons</b>, <b>twitter-bootstrap</b> и т.д. Конечно же активно использую <b>javascript</b> и <b>jquery</b>. Активно осваиваю <b>angularjs</b> и слежу за развитием других js-фрейморков. Помимо это в работал с проектами использующих такие вещи как  <b>Yii</b>, <b>Symphony</b>, <b>jsp</b>, <b>Primefaces</b>, <b>gradle</b>.</p>
+			
+			<ul class="skills-list">
+				<li class="skills-list__skill"><img src="/img/tech/html.png" alt=""></li>
+				<li class="skills-list__skill"><img src="/img/tech/css.png" alt=""></li>
+				<li class="skills-list__skill"><img src="/img/tech/js.png" alt=""></li>
+				<li class="skills-list__skill"><img src="/img/tech/sass.png" alt=""></li>
+				<li class="skills-list__skill"><img src="/img/tech/gulp.png" alt=""></li>
+				<li class="skills-list__skill"><img src="/img/tech/git.png" alt=""></li>
+				<li class="skills-list__skill"><img src="/img/tech/php.png" alt=""></li>
+			</ul>
+		</div>
+	</section>
+		
+	<section class="projects">
+		<div class="container">
+
+
+			<h3>Проекты</h3>
+
+			<div class="project-items">
+
+			<% projectItems.forEach(function(projectItem) { %>
+
+				<div class="project-item">
+					<a target="_blank" href="<%= projectItem.link %>" class="project-item__link">
+						<img class="project-item__image" 
+								src="<%= projectsImageRoot %>/<%= projectItem.imageName %>" 
+								alt="">
+						<div class="project-item__overlay">
+							<div class="project-item__title"><%= projectItem.name %></div>
+						</div>
+						<div class="project-item__info">
+							<h5 class="project-item__big-name"><%= projectItem.name %></h5>
+							<div class="project-item__text"><%= projectItem.description %></div>
+							<div class="btn btn_view">Посмотреть</div>
+						</div>
+					</a>
+				</div>
+							
+			<% }); %>
+												
+			</div>
+
+		</div>
+	</section>
+
+	<section class="contacts">
+		<div class="container">
+			<h3>Свяжитесь со мной</h3>
+			<a href="skype:frenz1e" class="contacts-item"><h4>По skype</h4>frenz1e</a>
+			<a href="mailto:vitaliydus@gmail.com" class="contacts-item"><h4>По email</h4>vitaliydus@gmail.com</a>
+			<a href="tel:+7 913 455 1007" class="contacts-item"><h4>По телефону</h4>+7 913 455 1007</a>
+		</div>
+	</section>
+
+	<script src="/js/main.js"></script>
+
+</body>
+</html>
