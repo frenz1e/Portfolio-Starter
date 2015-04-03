@@ -1,0 +1,350 @@
+html, button, input, select, textarea {
+  color: #222; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+html {
+  font-size: 1em;
+  line-height: 1.4; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+audio, canvas, img, video {
+  vertical-align: middle; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+textarea {
+  resize: vertical; }
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+body {
+  font: 16px/26px Helvetica, Helvetica Neue, Arial; }
+
+::-webkit-input-placeholder {
+  color: #999; }
+
+:-moz-placeholder {
+  color: #999; }
+
+::-moz-placeholder {
+  color: #999; }
+
+:-ms-input-placeholder {
+  color: #999; }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px; }
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%; }
+
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+.invisible {
+  visibility: hidden; }
+
+.clearfix:before, .main-nav:before, .mp-intro-lists:before, .clearfix:after, .main-nav:after, .mp-intro-lists:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after, .main-nav:after, .mp-intro-lists:after {
+  clear: both; }
+
+.clearfix, .main-nav, .mp-intro-lists {
+  *zoom: 1; }
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+.papicon_hand {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 22px;
+  height: 25px; }
+
+.papicon_knuckle {
+  background-image: url(../img/sprite.png);
+  background-position: -22px 0px;
+  width: 23px;
+  height: 22px; }
+
+.papicon_rknuckle {
+  background-image: url(../img/sprite.png);
+  background-position: -45px 0px;
+  width: 23px;
+  height: 22px; }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body {
+  background: #e5e3dc url(../img/bg_pattern.png);
+  font-family: 'Neucha', cursive;
+  min-width: 1000px; }
+
+.header-container {
+  background: #000 url(../img/mpintro_bg.jpg) 50% 0 no-repeat; }
+
+.main-header {
+  max-width: 900px;
+  margin: 0 auto; }
+  .main-header h1 {
+    color: #a9a9a9;
+    text-align: center;
+    font-size: 26px;
+    font-weight: normal;
+    margin: 15px 0 13px; }
+  .main-header h2 {
+    color: #fff;
+    font-size: 34px;
+    font-weight: normal;
+    margin: 0 0 70px;
+    text-align: center; }
+
+.main-nav {
+  color: #fef6bb;
+  font-size: 20px;
+  line-height: 68px; }
+  .main-nav ul {
+    margin: 0;
+    padding: 0; }
+  .main-nav li {
+    float: left; }
+  .main-nav a {
+    color: #fef6bb;
+    text-decoration: none;
+    padding: 0; }
+    .main-nav a:before {
+      background-image: url(../img/sprite.png);
+      background-position: 0px 0px;
+      width: 22px;
+      height: 25px;
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 12px;
+      position: relative;
+      top: -2px; }
+
+.l-top-menu {
+  float: left; }
+  .l-top-menu li {
+    margin-right: 35px; }
+
+.r-top-menu {
+  float: right; }
+  .r-top-menu li {
+    margin-left: 35px; }
+
+.mp-intro {
+  position: relative;
+  min-height: 572px; }
+  .mp-intro .logo {
+    position: absolute;
+    width: 222px;
+    height: 219px;
+    background: url(../img/logo.png) 0 0 no-repeat;
+    left: 50%;
+    top: 150px;
+    margin-left: -111px; }
+
+.mp-intro-lists__node {
+  color: #a9a9a9;
+  font-size: 15px;
+  line-height: 18px;
+  width: 300px;
+  margin-bottom: 55px; }
+  .mp-intro-lists__node h3 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0 0 19px;
+    position: relative; }
+    .mp-intro-lists__node h3:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: -40px;
+      top: -2px;
+      background-image: url(../img/sprite.png);
+      background-position: -22px 0px;
+      width: 23px;
+      height: 22px; }
+
+.mp-intro-lists__node_l {
+  float: left; }
+
+.mp-intro-lists__node_r {
+  float: right;
+  text-align: right; }
+  .mp-intro-lists__node_r h3:before {
+    left: auto;
+    right: -40px;
+    background-image: url(../img/sprite.png);
+    background-position: -45px 0px;
+    width: 23px;
+    height: 22px; }
+
+.mp-intro-lists__node_l:nth-child(3) {
+  clear: both; }
+
+.main-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 35px 25px 90px;
+  background: rgba(255, 255, 255, 0.5); }
+  .main-container h2 {
+    color: #000;
+    margin: 0 0 30px;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center; }
+  .main-container .offers-list {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .main-container .mp-offer {
+    clear: both;
+    margin-bottom: 20px; }
+  .main-container .mp-offer__img {
+    float: left;
+    margin: 0 30px 20px 20px; }
+  .main-container .mp-offer__info {
+    overflow: hidden; }
+  .main-container .mp-offer__title {
+    color: #008886;
+    font-size: 30px;
+    margin: 15px 0 10px;
+    text-decoration: none; }
+  .main-container .mp-offer__text {
+    overflow: hidden;
+    font-size: 18px;
+    color: #363636;
+    line-height: 22px; }
+  .main-container .mp-offer__price {
+    color: #e01c00;
+    float: right;
+    font-family: 'Lobster', cursive;
+    font-size: 18px;
+    margin-left: 30px; }
+    .main-container .mp-offer__price span {
+      font-size: 36px; }
+  .main-container .mp-offer:nth-child(2n) .mp-offer__price {
+    color: #04a31a; }
+
+.main-footer {
+  color: #999;
+  text-align: center;
+  padding: 35px 0;
+  font: normal 14px Arial, sans-serif; }
+
+.text-center {
+  text-align: center; }
+
+/*****************
+	mp forms
+******************/
+.mp-form {
+  width: 50%;
+  margin: 0 auto;
+  padding: 30px;
+  background: #fff; }
+  .mp-form input[type=text], .mp-form input[type=email], .mp-form input[type=password] {
+    width: 100%;
+    display: block;
+    line-height: 30px;
+    height: 30px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    outline: 0;
+    border: 1px solid #999; }
+    .mp-form input[type=text] + .form-help-block, .mp-form input[type=email] + .form-help-block, .mp-form input[type=password] + .form-help-block {
+      margin: -15px 0 10px; }
+  .mp-form a:hover {
+    text-decoration: none; }
+  .mp-form button {
+    color: #fef6bb;
+    background: #111;
+    border: none;
+    line-height: 40px;
+    min-width: 200px;
+    margin: 0 0 10px;
+    padding: 0 20px;
+    outline: 0;
+    font-family: 'Neucha', cursive;
+    font-size: 18px; }
+  .mp-form .mp-rekl-or-webm {
+    text-align: center;
+    margin: 20px 0 20px; }
+    .mp-form .mp-rekl-or-webm label {
+      margin: 0 10px; }
+    .mp-form .mp-rekl-or-webm input {
+      margin-right: 7px; }
+  .mp-form .form-help-block {
+    color: #999; }

@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'klementinaregular';
+    src: url('klementina-webfont.eot');
+    src: url('klementina-webfont.eot?#iefix') format('embedded-opentype'),
+         url('klementina-webfont.woff') format('woff'),
+         url('klementina-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'plumbcondensed_lightregular';
+    src: url('plumbcondensed-light-webfont.eot');
+    src: url('plumbcondensed-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('plumbcondensed-light-webfont.woff') format('woff'),
+         url('plumbcondensed-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'plumbcondensedregular';
+    src: url('plumbcondensed-regular-webfont.eot');
+    src: url('plumbcondensed-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('plumbcondensed-regular-webfont.woff') format('woff'),
+         url('plumbcondensed-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
