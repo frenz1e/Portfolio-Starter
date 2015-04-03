@@ -1,7 +1,6 @@
 var myPage = {
 	
 	init: function() {
-		this.lazyInit();
 		this.parallax();
 	},
 
