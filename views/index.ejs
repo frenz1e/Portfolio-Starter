@@ -77,7 +77,11 @@
 						<div class="project-item__info">
 							<h5 class="project-item__big-name"><%= projectItem.name %></h5>
 							<div class="project-item__text"><%= projectItem.description %></div>
-							<div class="btn btn_view">Посмотреть</div>
+							<div class="btn btn_view">Посмотреть
+							<% if (projectItem.github) {%>
+								 <span class="no-tt">на GitHub</span>
+							<% } %>
+							</div>
 						</div>
 					</a>
 				</div>
